@@ -157,11 +157,13 @@ const finishedBooks = [
   },
 ];
 
-/* ───────── Book cover with shimmer + gradient fallback ───────── */
+/* ───────── Book cover with shimmer + gradient fallback ─────────
+   Covers are bundled locally in /covers/{isbn}.jpg — no external
+   requests, so they can never fail to load (DNS, rate limits, etc.). */
 const BookCover = ({ isbn, title, gradient, size = 'L', className = '', eager = false }) => {
   const [failed, setFailed] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const src = isbn && !failed ? `https://covers.openlibrary.org/b/isbn/${isbn}-${size}.jpg` : null;
+  const src = isbn && !failed ? `/covers/${isbn}.jpg` : null;
 
   /* Fallback gradient cover (no real image available) */
   if (!src) {
@@ -518,7 +520,7 @@ const PersonalSection = () => {
           <p className="text-gray-500 text-sm">
             Reading something I should pick up?{' '}
             <a
-              href="mailto:sofoniaskidus@gmail.com?subject=Book%20recommendation"
+              href="mailto:sofoniaskidus@gmail.com?subject=Book%20recommendation%20for%20Kidus&body=Hi%20Kidus%2C%0A%0AI%20think%20you%20should%20read%20%3Cbook%20title%20here%3E%20by%20%3Cauthor%3E.%0A%0A%3Cwhy%20you%27d%20love%20it%3E"
               className="text-gold-400 hover:text-gold-500 transition-colors inline-flex items-center gap-1.5"
             >
               <Mail size={14} />
