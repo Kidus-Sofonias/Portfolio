@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Code, Play } from 'lucide-react';
+import SmartImage from './SmartImage';
 
 const ProjectsSection = () => {
   const [activeProject, setActiveProject] = useState(0);
@@ -68,7 +69,7 @@ const ProjectsSection = () => {
       description: 'A pixel-perfect Netflix clone with movie browsing and streaming features.',
       details: 'Implemented responsive layouts, movie carousels, search functionality, and video player integration. Features a polished UI that mirrors the Netflix experience.',
       tags: ['React', 'TMDB API', 'CSS'],
-      image: '/kidus.png',
+      image: '/netflix-clone.png',
       liveUrl: 'https://kidus-sofonias.github.io/Netflix-Clone/',
       codeUrl: 'https://github.com/Kidus-Sofonias/Netflix-Clone',
     },
@@ -138,10 +139,10 @@ const ProjectsSection = () => {
                 className="glass rounded-2xl overflow-hidden"
               >
                 <div className="relative">
-                  <img
+                  <SmartImage
                     src={projects[activeProject].image}
                     alt={projects[activeProject].title}
-                    className="w-full h-64 md:h-80 object-cover"
+                    className="h-64 md:h-80"
                   />
                   <div className="absolute top-4 right-4 px-3 py-1 bg-navy-900/80 rounded-full">
                     <span className="text-gold-400 font-mono text-xs">

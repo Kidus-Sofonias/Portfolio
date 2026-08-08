@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, Search, Wrench, TrendingUp } from 'lucide-react';
+import SmartImage from './SmartImage';
 
 const AboutSection = () => {
   const pillars = [
@@ -74,10 +75,11 @@ const AboutSection = () => {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden">
-              <img
+              <SmartImage
                 src="/kidus.png"
                 alt="Kidus Sofonias"
-                className="w-full h-auto object-cover aspect-[3/4]"
+                eager
+                className="aspect-[4/7]"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                 <h3 className="font-serif text-2xl">Kidus Sofonias</h3>

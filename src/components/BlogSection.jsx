@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, BellOff, ArrowRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import SmartImage from './SmartImage';
 
 const BLOG_POST_COUNT = 3; // Update this when adding new posts
 
@@ -86,16 +87,21 @@ const ImageModal = ({ post, onClose }) => {
           >
             <div className="relative aspect-[4/3] bg-black">
               <AnimatePresence mode="wait">
-                <motion.img
+                <motion.div
                   key={current}
                   initial={{ opacity: 0, x: 40 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -40 }}
                   transition={{ duration: 0.25 }}
-                  src={images[current]}
-                  alt={`${post.title} — image ${current + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                  className="absolute inset-0"
+                >
+                  <SmartImage
+                    src={images[current]}
+                    alt={`${post.title} — image ${current + 1}`}
+                    eager
+                    className="w-full h-full"
+                  />
+                </motion.div>
               </AnimatePresence>
 
               {images.length > 1 && (
@@ -248,10 +254,10 @@ const BlogSection = () => {
               onClick={() => setSelectedPost(post)}
             >
               <div className="relative h-56 overflow-hidden">
-                <img
+                <SmartImage
                   src={post.images[0]}
                   alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/20 to-transparent" />
 

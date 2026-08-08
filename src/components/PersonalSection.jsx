@@ -157,11 +157,13 @@ const finishedBooks = [
   },
 ];
 
-/* ───────── Book cover with gradient fallback ───────── */
-const BookCover = ({ isbn, title, gradient, size = 'L', className = '' }) => {
+/* ───────── Book cover with shimmer + gradient fallback ───────── */
+const BookCover = ({ isbn, title, gradient, size = 'L', className = '', eager = false }) => {
   const [failed, setFailed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const src = isbn && !failed ? `https://covers.openlibrary.org/b/isbn/${isbn}-${size}.jpg` : null;
 
+  /* Fallback gradient cover (no real image available) */
   if (!src) {
     return (
       <div className={`w-full h-full bg-gradient-to-br ${gradient} relative overflow-hidden ${className}`}>
@@ -181,13 +183,26 @@ const BookCover = ({ isbn, title, gradient, size = 'L', className = '' }) => {
   }
 
   return (
-    <img
-      src={src}
-      alt={`${title} book cover`}
-      loading="lazy"
-      onError={() => setFailed(true)}
-      className={`w-full h-full object-cover ${className}`}
-    />
+    <div className={`relative w-full h-full overflow-hidden bg-navy-800 ${className}`}>
+      {/* Shimmer while loading */}
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-0 animate-shimmer transition-opacity duration-500 ${
+          loaded ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
+      <img
+        src={src}
+        alt={`${title} book cover`}
+        loading={eager ? 'eager' : 'lazy'}
+        decoding="async"
+        onLoad={() => setLoaded(true)}
+        onError={() => setFailed(true)}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+          loaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+    </div>
   );
 };
 
@@ -273,6 +288,7 @@ const BookModal = ({ book, onClose }) => {
                               title={b.title}
                               gradient={book.gradient}
                               size="S"
+                              eager
                             />
                           </div>
                           <p className="text-[10px] text-gray-500 mt-1.5 leading-tight text-center">

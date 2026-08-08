@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Award, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import SmartImage from './SmartImage';
 
 const CredentialsSection = () => {
   const [showCert, setShowCert] = useState(false);
@@ -69,10 +70,10 @@ const CredentialsSection = () => {
                 className="relative rounded-xl overflow-hidden cursor-pointer border border-navy-600 group"
                 onClick={() => setShowCert(true)}
               >
-                <img
+                <SmartImage
                   src={certification.image}
                   alt="Evangadi Certificate"
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="h-48 group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
@@ -111,9 +112,10 @@ const CredentialsSection = () => {
               className="relative max-w-3xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <SmartImage
                 src={certification.image}
                 alt="Evangadi Certificate — Full Size"
+                eager
                 className="w-full rounded-xl shadow-2xl"
               />
             </motion.div>
