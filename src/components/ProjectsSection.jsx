@@ -13,7 +13,7 @@ const ProjectsSection = () => {
       description: 'A production-pilot driving safety platform — smart, safe, and inexpensive solution to Ethiopias road accident crisis.',
       details: 'Took a year to build. The goal: improve road safety in Ethiopia by monitoring and scoring driver trips with zero additional hardware. Turns a standard smartphone into a professional telematics tool using GPS and IMU sensors. Detects risky driving events in real-time, produces an AI-blended safety score with actionable feedback. Features adaptive rules+ML scoring (1.0 F1 score), WebSocket live alerts, offline-first pipeline, multilingual support (English, Amharic, Afaan Oromoo), and dual-role app (driver + fleet admin). 50+ real pilot trips captured on Render with Supabase PostgreSQL.',
       tags: ['FastAPI', 'Python', 'PostgreSQL', 'React Native', 'Expo', 'scikit-learn', 'WebSocket', 'Supabase', 'Render'],
-      image: '/driverpulse.png',
+      image: '/drivepulse.png',
       liveUrl: 'https://driverpulse.onrender.com/',
       codeUrl: 'https://github.com/Kidus-Sofonias/SD-backend-and-model',
     },

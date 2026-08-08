@@ -4,9 +4,9 @@ import { Download } from 'lucide-react';
 
 const ResumeSection = () => {
   const stats = [
-    { value: '9+', label: 'YEARS EXPERIENCE' },
-    { value: '40+', label: 'PRODUCTS SHIPPED' },
-    { value: '12', label: 'AWARDS & FEATURES' },
+    { value: '3+', label: 'YEARS EXPERIENCE' },
+    { value: '10+', label: 'PRODUCTS SHIPPED' },
+    { value: '15+', label: 'AWARDS & FEATURES' },
   ];
 
   return (
@@ -15,24 +15,26 @@ const ResumeSection = () => {
       
       <div className="relative z-10 container mx-auto px-6 text-center">
         <p className="text-gold-400 font-mono text-sm tracking-widest mb-6">
-          06 — DOSSIER
+          07 — DOSSIER
         </p>
         <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl mb-8">
           The full story, on one page.
         </h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
-          A distilled record of nine years building products at the edge of engineering and design. 
+          A distilled record of three years building products at the edge of engineering and design. 
           Download the complete resume as a PDF.
         </p>
 
-        <motion.button
+        <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          href="/Kidus_Sofonias_Resume.pdf"
+          download
           className="inline-flex items-center gap-3 px-10 py-5 bg-gold-500 text-navy-900 rounded-full font-mono text-sm tracking-widest font-medium hover:bg-gold-400 transition-colors mb-4"
         >
           <Download size={18} />
           DOWNLOAD RESUME
-        </motion.button>
+        </motion.a>
         <p className="text-gray-500 font-mono text-xs tracking-wider mb-16">
           PDF · GENERATED LIVE · ~80KB
         </p>

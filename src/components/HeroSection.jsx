@@ -151,18 +151,22 @@ const HeroSection = () => {
         className="absolute bottom-0 left-0 right-0 glass py-6"
       >
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-3xl md:text-4xl font-serif text-gold-400">4+</p>
+              <p className="text-3xl md:text-4xl font-serif text-gold-400">5+</p>
               <p className="text-xs text-gray-500 tracking-widest mt-2">LIVE PROJECTS</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-serif text-gold-400">10+</p>
-              <p className="text-xs text-gray-500 tracking-widest mt-2">PROJECTS COMPLETED</p>
+              <p className="text-3xl md:text-4xl font-serif text-gold-400">3+</p>
+              <p className="text-xs text-gray-500 tracking-widest mt-2">YEARS EXPERIENCE</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-serif text-gold-400">100%</p>
-              <p className="text-xs text-gray-500 tracking-widest mt-2">CLIENT FOCUSED</p>
+              <p className="text-3xl md:text-4xl font-serif text-gold-400">10+</p>
+              <p className="text-xs text-gray-500 tracking-widest mt-2">PROJECTS SHIPPED</p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-serif text-gold-400">15+</p>
+              <p className="text-xs text-gray-500 tracking-widest mt-2">AWARDS & FEATURES</p>
             </div>
           </div>
         </div>

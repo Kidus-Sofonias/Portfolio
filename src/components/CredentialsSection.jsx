@@ -18,7 +18,7 @@ const CredentialsSection = () => {
     <section id="credentials" className="section-padding bg-navy-900">
       <div className="container mx-auto px-6">
         <p className="text-gold-400 font-mono text-sm tracking-widest mb-4">
-          05 — CREDENTIALS
+          06 — CREDENTIALS
         </p>
         <h2 className="font-serif text-4xl md:text-5xl mb-16">Education & Certifications</h2>
 

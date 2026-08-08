@@ -19,6 +19,7 @@ const Navigation = ({ activeSection }) => {
     { id: 'capabilities', label: 'Capabilities' },
     { id: 'projects', label: 'Work' },
     { id: 'blog', label: 'Blog' },
+    { id: 'personal', label: 'Personal' },
     { id: 'credentials', label: 'Credentials' },
   ];
 

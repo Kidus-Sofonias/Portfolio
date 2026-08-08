@@ -5,6 +5,7 @@ import AboutSection from './components/AboutSection';
 import CapabilitiesSection from './components/CapabilitiesSection';
 import ProjectsSection from './components/ProjectsSection';
 import BlogSection from './components/BlogSection';
+import PersonalSection from './components/PersonalSection';
 import CredentialsSection from './components/CredentialsSection';
 import ResumeSection from './components/ResumeSection';
 import Footer from './components/Footer';
@@ -14,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'capabilities', 'projects', 'blog', 'credentials'];
+      const sections = ['about', 'capabilities', 'projects', 'blog', 'personal', 'credentials'];
       
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -40,6 +41,7 @@ function App() {
       <CapabilitiesSection />
       <ProjectsSection />
       <BlogSection />
+      <PersonalSection />
       <CredentialsSection />
       <ResumeSection />
       <Footer />
