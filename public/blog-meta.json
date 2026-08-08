@@ -1,0 +1,20 @@
+{
+  "count": 3,
+  "posts": [
+    {
+      "id": 1,
+      "title": "Edify X Kuta Learning Hub — EdTech Expo 2026",
+      "date": "2026"
+    },
+    {
+      "id": 2,
+      "title": "Building Drive Pulse — A Year of Road Safety Innovation",
+      "date": "2026"
+    },
+    {
+      "id": 3,
+      "title": "Isomer Explorer — Graph Theory Meets Chemistry",
+      "date": "2025"
+    }
+  ]
+}
