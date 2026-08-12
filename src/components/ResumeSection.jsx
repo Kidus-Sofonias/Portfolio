@@ -10,19 +10,16 @@ const ResumeSection = () => {
   ];
 
   return (
-    <section id="resume" className="section-padding bg-navy-800 relative overflow-hidden">
-      <div className="absolute inset-0 constellation-bg opacity-30" />
-      
+    <section id="resume" className="section-padding relative overflow-hidden">
       <div className="relative z-10 container mx-auto px-6 text-center">
         <p className="text-gold-400 font-mono text-sm tracking-widest mb-6">
           07 — DOSSIER
         </p>
-        <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl mb-8">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-8">
           The full story, on one page.
         </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
-          A distilled record of three years building products at the edge of engineering and design. 
-          Download the complete resume as a PDF.
+        <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-12">
+          Three years of building products at the edge of engineering and design.
         </p>
 
         <motion.a

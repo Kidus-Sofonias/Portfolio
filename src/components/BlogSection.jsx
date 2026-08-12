@@ -234,7 +234,7 @@ const BlogSection = () => {
   };
 
   return (
-    <section id="blog" className="section-padding bg-navy-800">
+    <section id="blog" className="section-padding">
       <div className="container mx-auto px-6">
         <p className="text-gold-400 font-mono text-sm tracking-widest mb-4">
           04 — BLOG
@@ -302,8 +302,8 @@ const BlogSection = () => {
           </h3>
           <p className="text-gray-400 mb-8 max-w-md mx-auto">
             {isSubscribed
-              ? 'You\'ll receive a notification on your device whenever I publish a new blog post. Click it to read anytime.'
-              : 'Subscribe to receive a notification on your phone whenever I publish a new blog post. Tap the notification to open and read it right in your browser.'}
+              ? 'You\'ll get a notification on your device whenever I publish something new.'
+              : 'Get a push notification on your phone whenever I publish a new post.'}
           </p>
 
           {isSubscribed ? (

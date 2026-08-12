@@ -10,13 +10,13 @@ const CredentialsSection = () => {
     title: 'Full-Stack MERN Development',
     issuer: 'EVANGADI NETWORKS',
     date: 'COMPLETED 2024',
-    description: 'Intensive full-stack development program covering MongoDB, Express.js, React, and Node.js. Built multiple production-ready applications and gained hands-on experience with modern web development practices, RESTful APIs, database design, and deployment.',
+    description: 'Intensive full-stack program covering MongoDB, Express.js, React, and Node.js — with hands-on practice building production-ready apps, REST APIs, and database design.',
     skills: ['MongoDB', 'Express.js', 'React', 'Node.js', 'REST APIs', 'JWT Auth', 'Git'],
     image: '/evangadi_certificate.jpg',
   };
 
   return (
-    <section id="credentials" className="section-padding bg-navy-900">
+    <section id="credentials" className="section-padding">
       <div className="container mx-auto px-6">
         <p className="text-gold-400 font-mono text-sm tracking-widest mb-4">
           06 — CREDENTIALS

@@ -169,40 +169,50 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Progress bar animation */
-.progress-bar {
-  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+
+/* Water-flow gradient background */
+@keyframes blob-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(60px, -50px) scale(1.12);
+  }
+  66% {
+    transform: translate(-50px, 40px) scale(0.92);
+  }
 }
 
-/* Constellation background */
-.constellation-bg {
-  position: relative;
-  overflow: hidden;
+.animate-blob-drift {
+  animation: blob-drift 18s ease-in-out infinite;
+  will-change: transform;
 }
 
-.constellation-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(1px 1px at 20px 30px, rgba(212, 168, 83, 0.4), transparent),
-    radial-gradient(1px 1px at 40px 70px, rgba(212, 168, 83, 0.3), transparent),
-    radial-gradient(1px 1px at 50px 160px, rgba(212, 168, 83, 0.2), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(212, 168, 83, 0.4), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(212, 168, 83, 0.3), transparent),
-    radial-gradient(1px 1px at 160px 120px, rgba(212, 168, 83, 0.2), transparent);
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  animation: twinkle 5s ease-in-out infinite;
-  pointer-events: none;
+.water-blob {
+  filter: blur(90px);
 }
 
-@keyframes twinkle {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
+@media (max-width: 767px) {
+  .water-blob {
+    filter: blur(60px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob-drift {
+    animation: none;
+  }
+}
+
+/* Hide horizontal scrollbars on carousels but keep them scrollable */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* Section padding */

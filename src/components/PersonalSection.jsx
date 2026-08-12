@@ -20,19 +20,19 @@ const hobbies = [
     icon: Crown,
     title: 'Chess',
     description:
-      "~1200 rated on chess.com. I play the London System and I'm a devoted GothamChess fan — I've internalized more Levy wisdom than I'd care to admit. Every game is a small exercise in out-calculating someone.",
+      "~1200 on chess.com. London System loyalist and devoted GothamChess fan — every game is a small exercise in out-calculating someone.",
   },
   {
     icon: Dribbble,
     title: 'Basketball',
     description:
-      'Played seriously enough to take a full summer training program. The court sharpens the same skills I use in code: reading the field, timing your move, and staying cool under pressure.',
+      'Took a full summer training program. The court sharpens the same skills I use in code: reading the field, timing your move, staying cool under pressure.',
   },
   {
     icon: Zap,
     title: 'Marvel',
     description:
-      "Dedicated Marvel fan. My favorite character is Tony Stark — the engineer who builds his way out of every problem. My long-term goal is to be that guy: brilliant, creative, and always working on something that matters.",
+      "Tony Stark is my guy — the engineer who builds his way out of every problem. Long-term goal: be that guy.",
   },
 ];
 
@@ -369,13 +369,12 @@ const PersonalSection = () => {
   }
 
   return (
-    <section id="personal" className="section-padding bg-navy-900">
+    <section id="personal" className="section-padding">
       <div className="container mx-auto px-6">
         <p className="text-gold-400 font-mono text-sm tracking-widest mb-4">05 — PERSONAL</p>
         <h2 className="font-serif text-4xl md:text-5xl mb-6">Beyond the code.</h2>
         <p className="text-gray-400 max-w-2xl mb-16 leading-relaxed">
-          The deep-analysis habit doesn't switch off when I close the editor — it shows up at the
-          chessboard, on the court, and in the books I finish.
+          The deep-analysis habit doesn't switch off when I close the editor — chessboard, court, and the books I finish.
         </p>
 
         {/* ── Hobbies ── */}
@@ -416,7 +415,7 @@ const PersonalSection = () => {
         {/* Carousel */}
         <div
           ref={stageRef}
-          className="relative select-none"
+          className="relative select-none overflow-hidden"
           style={{ height: CARD_H + 64 }}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
